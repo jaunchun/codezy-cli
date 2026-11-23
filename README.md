@@ -50,13 +50,13 @@ choice applies right away.
 ```text
 $ /settings
 ╭─ settings ──────────────────────────────────────────╮
-│  ▎ appearance                                        │
+│  │ appearance                                       │
 │   1 theme        graphite              /theme paper │
 │   2 accent      ▸● cobalt ● lime ● amber ● magenta  │
 │   3 thinking    on                    /thinking     │
 │   · provider    ollama                              │
 │  ...                                                │
-│    pick a number to change it · b goes back · q closes╯
+│  pick a number to change it · b goes back · q closes╯
 settings ❯ 1
 ╭─ theme ────────────────────────────────────────────╮
 │  1  graphite   ▸ current                           │
