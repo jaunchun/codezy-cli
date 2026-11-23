@@ -1,0 +1,25 @@
+◆ codezy 3.2.0   agent   qwen2.5-coder:7b   ~/acme/api   main*                                                   ctx 18%
+------------------------------------------------------------------------------------------------------------------------
+> add rate limiting to the API
+  12:04
+
+# I'll look at the middleware first, then add a token bucket.
+
+  * read  src/middleware/auth.ts                                                                                   42 ms
+  * grep  "rateLimit"                                                                                             3 hits
+
+  ~ edit src/middleware/rate.ts +18 -0 [a]pply [d]ecline
+    +- src/middleware/rate.ts -----------------------------------------------------------------------------------------+
+    | + export function rateLimit(limit: number, windowMs: number) {                                                   |
+    | +   const hits = new Map<string, number[]>()                                                                     |
+    | +   return (req, res, next) => {                                                                                 |
+    | +     const now = Date.now()                                                                                     |
+    | +     const recent = (hits.get(req.ip) ?? []).filter(t => now - t < windowMs)                                    |
+    | +     if (recent.length >= limit) return res.status(429).end() ^                                                 |
+    +------------------------------------------------------------------------------------------------------------------+
+
++- you -------------------------------------------------------------------------------------------------------- agent -+
+| ask, / for commands, @ for files                                                                                     |
++----------------------------------------------------------------------------------------------------------------------+
+
+Enter send · Shift+Enter newline · Esc stop · ^R history · ? help                                     18% ctx · 1.2k tok
