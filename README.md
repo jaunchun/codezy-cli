@@ -34,7 +34,7 @@ edits and runs commands with per-action approval. Switch modes from the prompt:
 │  ❯ explain this codebase                  ❯ fix the failing tests                  │
 │  ❯ add a feature                          ❯ review my diff                         │
 │                                                                                    │
-│  hello                                                                        │
+│  hello                                                                             │
 │                                                                                    │
 │  /help commands   /model switch   /theme palette   /exit quit                      │
 ╰────────────────────────────────────────────────────────────────────────────────────╯
@@ -49,20 +49,20 @@ choice applies right away.
 
 ```text
 $ /settings
-╭─ settings ────────────────────────────────────────╮
-│  ▎ appearance                                      │
-│   1 theme        graphite              /theme paper  │
+╭─ settings ──────────────────────────────────────────╮
+│  ▎ appearance                                        │
+│   1 theme        graphite              /theme paper │
 │   2 accent      ▸● cobalt ● lime ● amber ● magenta  │
 │   3 thinking    on                    /thinking     │
-│   · provider    ollama                               │
+│   · provider    ollama                              │
 │  ...                                                │
 │    pick a number to change it · b goes back · q closes╯
 settings ❯ 1
 ╭─ theme ────────────────────────────────────────────╮
-│  1  graphite   ▸ current                             │
-│  2  paper                                            │
-│  3  contrast                                         │
-╰─────────────────────────────────────────────────────╯
+│  1  graphite   ▸ current                           │
+│  2  paper                                          │
+│  3  contrast                                       │
+╰────────────────────────────────────────────────────╯
 settings ❯ 2
 ✓ theme paper · cobalt
 ```
