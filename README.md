@@ -30,7 +30,7 @@ edits and runs commands with per-action approval. Switch modes from the prompt:
 │                                                                                    │
 │  a coding agent in your terminal                                                   │
 │                                                                                    │
-│  ▎ start here                                                                      │
+│  │ start here                                                                      │
 │  ❯ explain this codebase                  ❯ fix the failing tests                  │
 │  ❯ add a feature                          ❯ review my diff                         │
 │                                                                                    │
